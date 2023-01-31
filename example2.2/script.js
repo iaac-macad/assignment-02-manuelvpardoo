@@ -15,7 +15,7 @@ init()
 
 // load multiple models
 // create an array of model names
-const models = ['Rhino_Logo.3dm', 'what.3dm']
+const models = ['NATURE ANALYSIS.3dm', 'what.3dm']
 
 for ( let i = 0; i < models.length; i ++ ) {
 
@@ -35,9 +35,9 @@ function init () {
 
     // create a scene and a camera
     scene = new THREE.Scene()
-    scene.background = new THREE.Color(1,1,1)
+    scene.background = new THREE.Color(201,1,1)
     camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
-    camera.position.y = - 30
+    camera.position.y = - 20
 
     // create the renderer and add it to the html
     renderer = new THREE.WebGLRenderer( { antialias: true } )

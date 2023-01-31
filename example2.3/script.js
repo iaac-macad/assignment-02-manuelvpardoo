@@ -6,7 +6,7 @@ import { HDRCubeTextureLoader } from 'three/addons/loaders/HDRCubeTextureLoader.
 
 // declare variables to store scene, camera, and renderer
 let scene, camera, renderer
-const model = 'Rhino_Logo.3dm'
+const model = 'NATURE ANALYSIS.3dm'
 
 // call functions
 init()

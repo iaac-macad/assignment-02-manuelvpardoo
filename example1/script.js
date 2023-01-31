@@ -2,12 +2,13 @@
 import * as THREE from 'three'
 
 // uncomment to load controls
-//import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 
 // create a scene and a camera
 const scene = new THREE.Scene()
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
-camera.position.z = 30
+scene.background = new THREE.Color(125,20,255)
+const camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 )
+camera.position.z = 100
 
 // create the renderer and add it to the html
 const renderer = new THREE.WebGLRenderer()
@@ -15,12 +16,12 @@ renderer.setSize( window.innerWidth, window.innerHeight )
 document.body.appendChild( renderer.domElement )
 
 // Uncomment next line to add controls
-// const controls = new OrbitControls( camera, renderer.domElement );
+const controls = new OrbitControls( camera, renderer.domElement );
 
 // Create an object and add it to the scene:
 
 // 1. Create the geometry:
-const geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 )
+const geometry = new THREE.TorusKnotGeometry( 10, .02, 1000, 160 )
 
 // 2. Create the material:
 const material = new THREE.MeshNormalMaterial()
@@ -37,8 +38,8 @@ function animate() {
     requestAnimationFrame( animate )
 
     // rotate torus a little bit each frame
-    torus.rotation.x += 0.01
-    torus.rotation.y += 0.01
+    torus.rotation.x += 0.03
+    torus.rotation.y += 0.1
 
     renderer.render( scene, camera )
 

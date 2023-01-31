@@ -46,7 +46,7 @@ function init() {
     const loader = new Rhino3dmLoader()
     loader.setLibraryPath( 'https://cdn.jsdelivr.net/npm/rhino3dm@7.11.1/' )
 
-    loader.load( 'sphere.3dm', function ( object ) {
+    loader.load( 'ACF__Multi_Part_Aggregation.3dm', function ( object ) {
 
         document.getElementById('loader').remove()
         // store material information
